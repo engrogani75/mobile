@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile and Laptop</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap" rel="stylesheet"> 
+   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+   <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+   <link rel="stylesheet" href="/style.css">
+ 
+
+</head>
+<body>
+
+
+<!-- =====================
+ add to cart details page
+ ====================== -->
+
+<section id="pic_page">
+    <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-xxl-6 col-12 main_img">
+            <div id="img-container">
+              <div id="lens"></div>
+              <img src="/images/news4.jpg" id="featherd" class=" img-thumbnail" alt="">
+            </div>
+            <div class="row">
+              <div class="col-md-3 col-3">
+                  <img src="/images/products/iPhone/iphone1.jpeg" class="img-thumbnail small_img" alt="">
+              </div>
+              <div class="col-md-3 col-3">
+                 <img src="/images/products/iPhone/ipone1/g3.jpg" class="img-thumbnail small_img" alt="">
+             </div>
+             <div class="col-md-3 col-3">
+                 <img src="/images/products/iPhone/ipone1/g2.jpg" class="img-thumbnail small_img" alt="">
+             </div>
+             <div class="col-md-3 col-3">
+                 <img src="/images/products/iPhone/ipone1/g1.jpg" class="img-thumbnail small_img" alt="">
+             </div>
+             </div>
+   
+        </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+  
+
+
+<!-- ===============================
+footer section start herer
+================================ -->
+
+<footer id="footer" class="pt-3">
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-xxl-4 col-10 mx-auto pt-5">
+      <p class="lead"><strong>We will provibe best services of our client</strong></p>
+      <p class="lead">This site all copy right by os shop</p>
+    </div>
+    <div class="col-md-4 col-10 col-xxl-4 mx-auto">
+     <div class="address">
+       <dl>
+         <dt>Address</dt>
+         <dd>Badda, Dhaka, Bangladesh</dd>
+         <dt>Condact us</dt>
+         <dd>Email: emos75@gmail.com</dd>
+         <dd>Phone: 09234567</dd>
+       </dl>
+     </div>
+    </div>
+    <div class="col-md-4 col-xxl-4 col-10 mx-auto">
+      <ul>
+        <h4>Socail Meadia</h4>
+        <li><a href="#"><i class="fab fa-facebook-square"></i> Facebook</a></li>
+        <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+        <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+        <li><a href="#"><i class="fab fa-linkedin"></i> Linkdin</a></li>
+        <li><a href="#"><i class="fab fa-google-plus"></i> googleplus</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</footer>
+
+<script src="/script.js"></script>
+
+
+    <script>
+     
+
+      const img = document.querySelector('.img')
+      img.addEventListener('mousemove', function(e){
+        let width = img.offsetWidth;
+        let height = img.offsetHeight;
+        let mouseX = e.offsetX;
+        let mouseY = e.offsetY;
+        //console.log(mouseY + " : " + mouseX);
+
+        let bgPositionX = (mouseX / width * 100);
+        let bgPositionY = (mouseY / height * 100);
+        //console.log(bgPositionY);
+
+       img.style.backgroundImg = bgPositionX + " % " + bgPositionY;
+      });
+
+        img.addEventListener ('mouseleave', function(){
+        img.style.backPosition = "center";
+
+      })
+
+
+
+     
+    </script>
+
+</body>
+</html>

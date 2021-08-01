@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1{
+            text-align: center;
+            margin: 50px;
+            padding: 20px;
+            color: brown;
+            text-shadow: cornsilk;
+            position: relative;
+        }
+
+        h1::after{
+            content: " ";
+            position: absolute;
+            width: 30%;
+            height: 3px;
+            color: darkgoldenrod;
+            bottom: 20px;
+            left: 35%;
+            background: darkgreen;
+
+        }
+
+        ul{
+            display: flex;
+            justify-content: center;
+        }
+
+        li{
+            list-style: none;
+        }
+
+        .ratting_star{
+            display: flex;
+            justify-content: center;
+        }
+        .ratting{
+            text-align: center;
+            font-size: 16px;
+            font-weight: 700;
+            margin: 3px 0;
+            width: 50px;
+            background-color: darkseagreen;
+        }
+
+
+        .next_div{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 3px;
+
+        }
+        .next{
+            text-align: center;
+            font-size: 22px;
+            padding: 10px;
+            width: 70px;
+            cursor: pointer;
+        }
+
+        .next:hover{
+            color: #fff;
+            background-color: darkred;
+        }
+
+
+
+        .star{
+            padding-left: 5px;
+            font-size: 40px;
+        }
+
+        .star:first-child{
+            padding: none;
+        }
+
+        .red{
+            color: rgb(236, 15, 15);
+        }
+        .yellow{
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Rate Your favourite Pic</h1>
+    <div class="ratting_star">
+        <img src="https://picsum.photos/400/300?grayscale" alt="">
+    </div>
+    <ul>
+        <li class="star"><i class="fas fa-star"></i></li>
+        <li class="star"><i class="fas fa-star"></i></li>
+        <li class="star"><i class="fas fa-star"></i></li>
+        <li class="star"><i class="fas fa-star"></i></li>
+        <li class="star"><i class="fas fa-star"></i></li>
+    </ul>
+    <div class="next_div">
+    <p class="ratting">Ratting</p>
+    <button class="next" onclick ="next()">Next</button>
+    </div>
+
+    <script>
+        const star = document.querySelectorAll('.star')
+        const ratting = document.querySelector('.ratting')
+
+        for (x  = 0; x < star.length; x++) {
+            star[x].starValue = (x+1);
+            // star[x].addEventListener('click', function(){  
+            //     console.log('I am ratting');
+
+
+            ['click', 'mouseover', 'mouseout'].forEach(function (e) {
+                star[x].addEventListener(e, showRatting)
+            })
+
+         }
+
+         function showRatting(e) {
+             let type = e.type;
+             //console.log(type);
+             let starValue = this.starValue;
+             //console.log(starValue);
+
+             if (type === 'click') {
+                    if (starValue > 0) {
+                       ratting.innerHTML = "You are ratting " + starValue + " stars."
+                    }
+                 } 
+
+             star.forEach(function (elem, ind) {
+
+                 if (type === 'click') {
+                     if (ind < starValue) {
+                         elem.classList.add('red')
+                         
+                     } else {
+                        elem.classList.remove('red')
+                     } 
+                 } 
+
+                 if (type === 'mouseover') {
+                     if (ind < starValue) {
+                         elem.classList.add('yellow')
+                         
+                     } else {
+                        elem.classList.remove('yellow')
+                     } 
+                 } 
+
+                 if (type === 'mouseout') {
+                    elem.classList.remove('yellow')
+                 } 
+
+             })
+
+          
+
+         }
+
+         function next() {
+               window.location.reload()
+           }
+
+            
+        
+
+        
+    </script>
+</body>
+</html>
