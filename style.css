@@ -1,0 +1,800 @@
+/* common css start here */
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+
+html,
+body{
+width:100%;
+overflow-x:hidden;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* mini nav css start here */
+
+.mini_nav{
+    background: #c0392b;
+}
+
+#regDrop li a:hover{
+    background: brown;
+}
+
+/* main nav css  */
+
+
+#main_nav a{
+    color: white;
+    position: relative;
+}
+
+#main_nav .nav-link:before{
+    content: '';
+    background-color: #fff;
+    width: 0%;
+    height: 2px;
+    bottom: 20%;
+    position: absolute;
+    transition: all 0.5s linear;
+}
+
+#main_nav .nav-link:hover:before{
+    width: 80%;
+  
+}
+
+#main_nav .dropdown-menu a:hover{
+    background: brown;
+}
+
+
+/* Carausel css  */
+
+#carousel img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.carousel-item{
+    height: 100vh;
+    min-height: 300px;
+    background: no-repeat scroll center scroll;
+    background-size: cover;
+    position: relative;
+}
+
+.carousel-item::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #000;
+    opacity: .5;
+}
+
+.carousel-caption{
+    bottom: 180px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.carousel-caption h5{
+    font-size: 80px;
+    font-weight: 700;
+}
+
+.carousel-caption p{
+    font-size: 2rem;
+}
+
+.btn-slider .btn{
+    transition: 0.2s;
+}
+
+.btn-slider .btn:hover{
+    transform: translateY(-10px);
+}
+
+/* featherd section css */
+
+#featherd{
+    background: #d0d3d4;
+    font-family: 'Cairo', sans-serif;
+}
+
+#featherd h2{
+    font-size: 26px;
+    font-weight: 700;
+    font-family: 'Cairo', sans-serif;
+}
+
+#featherd figure{
+    border: 2px solid  #34495e ;
+}
+
+#featherd figure img{
+    cursor: pointer;
+    box-shadow: 2px 5px 5px 5px #C2DFFF;
+    display: block;
+}
+
+.figure__img{
+    position: relative;
+}
+
+.figure__img .img_overlay{
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    color: #fff;
+    background: #bddeee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+   
+}
+
+.figure__img .img_overlay:hover{
+    opacity: 0.5;
+    color: rgb(202, 20, 20);
+    cursor: pointer;
+}
+.figure__img .img_overlay > *{
+    transform: translateY(20px);
+    transform: 0.2s;
+}
+.figure__img .img_overlay:hover > *{
+    transform: translateY(0px);
+}
+
+.img-thumbnail{
+    height: 300px;
+}
+
+#featherd figure:hover img{
+    transform: translateY(-10px);
+}
+
+#featherd .ipone h2,
+.sumsung h2,
+.laptop h2,
+.headPhone h2{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 60px;
+}
+
+#featherd .ipone h2::after,
+.sumsung h2::after,
+.laptop h2::after,
+.headPhone h2::after{
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 50%;
+    height: 3px;
+    width: 15%;
+    background: #aa726b;
+    transform: translateX(-50%);
+    border-radius: 5px;
+}
+
+#featherd i{
+    color: crimson;
+}
+
+#featherd p{
+    font-weight: bold;
+    text-align: center;
+}
+
+#featherd h5{
+    text-align: center;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#featherd .ratting{
+    text-align: center;
+}
+
+
+/* offer section css start here */
+
+#offer{
+    background: linear-gradient( #4cc2ca,  #1c2833 );
+    position: relative;
+}
+#offer .img-fluid{
+    width: 50%;
+    left: 20px;
+    box-shadow: 1px 1px 2px 1px #95a5a6;
+}
+
+#offer .offer-content{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    color:  #ecf0f1;
+    transition: 0.2s all;
+}
+
+#offer .btn:hover{
+    transform: translateY(-10px);
+}
+
+#offer s{
+    color:#f52b15;
+    font-size: 16px;
+}
+
+/* news-latter section css */
+
+
+#news_latter{
+    background: linear-gradient(#85c1e9,  #58d68d);
+    color: #fff;
+}
+
+#news_latter .ratting{
+    color:  #f7260f;
+}
+
+
+/* footer section css */
+
+#footer{
+    background: linear-gradient( #3498db,   #d4e6f1   );
+}
+
+#footer ul li{
+    list-style-type: circle;
+    padding: 0 2px;
+    border-bottom: 1px solid  #7f8c8d ;
+}
+
+#footer ul li:nth-last-child(1){
+    border-bottom: none;
+}
+
+#footer ul li a{
+    text-decoration: none;
+    color:   #212f3d ;
+    font-weight: 900;
+}
+
+#footer ul li:hover a{
+    background-color:  #e74c3c;
+    color: #fff; 
+}
+
+
+
+/* ============================
+meadia QUery
+============================= */
+
+
+/* // Medium devices (tablets, 768px and up) */
+
+@media (min-width: 268px) and (max-width: 767px) { 
+
+    #main_nav .nav-link:hover:before{
+        width: 25%;
+      
+    }
+
+    .carousel-caption h5{
+        font-size: 50px;
+    }
+
+    #featherd h5{
+        font-weight: 700;
+    }
+
+
+    #offer{
+        position: static;
+        display: grid;
+    }
+    #offer .img-fluid{
+        width: 100%;
+        left: 0px;
+    }
+    
+    #offer .offer-content{
+        position: static;
+        top: 0%;
+        left: 0%;
+        color:  #ecf0f1;
+        transition: 0.2s all;
+    }
+
+    #offer .offer-content .btn{
+        margin-bottom: 10px;
+    }
+
+    #footer{
+     text-align: center;
+    }
+
+    #footer ul li{
+        list-style: none;
+    }
+
+    #footer ul li a{
+        font-weight: 400;
+    }
+
+    
+}
+
+@media (min-width: 768px) and (max-width: 1200px){
+    .carousel-caption h5{
+        font-size: 40px;
+    }
+
+    .carousel-caption p{
+        font-size: 1rem;
+    }
+
+   #offer{
+       padding-bottom: 5px;
+   }
+
+    #offer .offer-content{
+        position: absolute;
+        top: 1%;
+        font-size: 14px;
+    }
+
+    
+}
+
+@media (min-width: 768px) and (max-width: 992px){
+    #featherd figure img{
+        width: 90%;
+    }
+}
+
+
+
+
+/* ===============================================
+==============================================
+page
+==========================================
+========================================= */
+
+
+/* =========================
+login page css
+========================== */
+
+
+#login_form{
+    background: linear-gradient( #5dade2,  #bed6e5);
+}
+
+.login_div{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+
+}
+
+.login_form{
+    position: absolute;
+    top: 25%;
+    left: 35%;
+    background-color: #241e1e;
+    transform: translate(-35%, -25%);
+    border-radius: 5px;
+    box-shadow: 12px 15px 3px 2px #C2DFFF;
+}
+
+.login_form h3{
+    padding: 20px 0px;
+}
+
+.login_form .mb-3{
+    position: relative;
+}
+
+.login_form .form-control{
+    color: #fff;
+    outline: none;
+    margin-bottom: 30px;
+   padding: 10px 0px;
+    background: transparent;
+}
+
+.login_form .mb-3 label{
+   color: #fff;
+   position: absolute;
+   top: 0;
+   left: 0;
+   padding: 10px 2px;
+   font-size: 16px;
+   transition: 0.5s;
+}
+
+.login_form input:focus ~ label,
+.login_form input:valid ~ label
+{
+    top: -40px;
+    left: 0;
+    color: #03a9f4;
+}
+
+
+.login_form input[type ="submit"]{
+    color: #fff;
+    background: transparent;
+    border: none;
+    outline: none;
+    background: #03a9f4;
+    padding: 8px 16px;
+}
+
+.login_form  span{
+    color: #fff;
+}
+
+
+@media (min-width: 268px) and (max-width: 767px){
+    .login_form{
+        position: absolute;
+        top: 25%;
+        left: 0%;
+        transform: translate(0%, -25%);
+    }
+}
+
+/* =========================
+Sign up page css
+========================== */
+
+#signUp_form{
+    background: linear-gradient( #5dade2,  #bed6e5);
+}
+
+.sign_div{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+
+}
+
+.signUp_form{
+    position: absolute;
+    top: 25%;
+    left: 35%;
+    background-color: #241e1e;
+    transform: translate(-35%, -25%);
+    border-radius: 5px;
+    box-shadow: 12px 15px 3px 2px #C2DFFF;
+}
+
+.signUp_form h3{
+    padding: 20px 0px;
+}
+
+.signUp_form .mb-3{
+    position: relative;
+}
+
+.signUp_form .form-control{
+    color: #fff;
+    outline: none;
+    margin-bottom: 30px;
+    padding: 10px 0px;
+    background: transparent;
+}
+
+.signUp_form .mb-3 label{
+   color: #fff;
+   position: absolute;
+   top: 0;
+   left: 0;
+   padding: 10px 2px;
+   font-size: 16px;
+   transition: 0.5s;
+}
+
+.signUp_form input:focus ~ label,
+.signUp_form input:valid ~ label
+{
+    top: -40px;
+    left: 0;
+    color: #03a9f4;
+}
+
+
+.signUp_form input[type ="submit"]{
+    color: #fff;
+    background: transparent;
+    border: none;
+    outline: none;
+    background: #03a9f4;
+    padding: 8px 16px;
+}
+
+.signUp_form  span{
+    color: #fff;
+}
+
+
+@media (min-width: 268px) and (max-width: 767px){
+    .signUp_form{
+        top: 25%;
+        left: 0%;
+        transform: translate(0%, -25%);
+       
+    }
+}
+
+
+/* =========================
+singlepafeof Iphone 12 page css
+========================== */
+
+
+
+
+
+#single_product{
+    background: linear-gradient(rgb(22, 153, 240), #fff );
+    padding: 20px 0px;
+
+}
+
+#single_product .single_img{
+    margin-top: 15px;
+    padding-top: 30px;
+}
+#single_product img{
+    cursor: pointer;
+}
+
+#single_product .img-fluid{
+    height: 250px;
+}
+
+.small_img{
+    height: 100px;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+#single_product .single_content{
+    margin-top: 40px;
+    padding-top: 30px;
+}
+.single_content h1{
+    font-size: 56px;
+    font-weight: 900;
+    letter-spacing: 3;
+    color: rgba(240, 10, 10, 0.788);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.single_content select{
+    padding: 8px 16px;
+    border-radius: 15px;
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545
+}
+
+.single_content input{
+    width: 70px;
+    padding: 5px 8px;
+    outline: none;
+    border-radius: .25rem;
+    border: 1px solid transparent;
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545
+}
+
+.single_content h3{
+    font-size: 32px;
+    font-weight: 700;
+    color: #dc3545;
+    letter-spacing: 2;
+}
+
+
+
+/* =========================
+add to cart page css
+========================== */
+
+
+#cart_page{
+    margin: 50px auto;
+    background: linear-gradient(#fff, rgb(179, 174, 174));
+}
+
+#cart_page p{
+    color: #6c757d;
+    font-size: 13px;
+}
+
+#cart_page a{
+   text-decoration: none;
+   color: #4f4f4f;
+}
+
+#cart_page h1{
+    color: #4f4f4f;
+    font-size: 22px;
+}
+
+#cart_page h2,
+#cart_page h4{
+    color: #4f4f4f;
+    font-size: 16px;
+}
+
+#cart_page .star{
+ cursor: pointer;
+}
+
+ .red{
+    color: #c0392b;
+}
+
+.orange{
+    color: #faa23e;
+}
+
+
+.qty{
+    position: relative;
+}
+
+.qty::after{
+    content: 'Node 1 item';
+    width: auto;
+    height: auto;
+    font-size: 10px;
+    text-align: center;
+    position: absolute;
+    bottom: -20px;
+    right: 15px;
+}
+
+#cart_page .page-link{
+    line-height: 16px;
+    width: 45px;
+    font-size: 10px;
+    color: #495057;
+}
+
+#cart_page .page-item input{
+  line-height: 22px;
+  padding: 3px;
+  font-size: 15px;
+}
+
+#cart_page .page-item input:focus,
+#cart_page .page-item button:focus{
+    box-shadow: none;
+}
+
+
+#cart_page .figure{
+    position: relative;
+    z-index: 1;
+}
+
+#glass{
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    border: 3px solid #000;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2;
+    
+}
+
+
+.card{
+    background: linear-gradient(#fff, rgb(223, 204, 204));
+}
+
+
+.final_amount button{
+    margin-left: 90px;
+}
+
+
+.card-body,
+.discount_input,
+#coupneBtn{
+    margin-left: 70px;
+}
+
+.order .btn{
+    width: 100%;
+}
+
+button:focus{
+color: none;
+border: none;
+}
+
+#details h3{
+    margin-left: 5px;
+
+}
+
+.button{
+    border: 1px solid #76797a;
+}
+
+.button button{
+    padding-top: 3px;
+    border: none;
+    margin-left: 3px;
+}
+
+
+
+
+
+
+
+
+/* piczoom page  */
+
+
+
+#img-container{
+    margin: 20px auto;
+    z-index: 1;
+    position: relative;
+    max-width: 500px;
+}
+
+img{
+   
+    cursor: pointer;
+}
+
+#lens{
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    border: 1px solid block;
+    cursor: pointer;
+    z-index: 2;
+    background-repeat: no-repeat;
+    cursor: none;
+}
+
